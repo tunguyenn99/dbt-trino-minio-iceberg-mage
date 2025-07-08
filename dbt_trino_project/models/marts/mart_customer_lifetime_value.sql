@@ -1,4 +1,4 @@
-{{ config(materialized='table', tags=['marts']) }}
+{{ config(materialized='view', tags=['marts']) }}
 
 with customer as (
     select * from {{ ref('stg_customer') }}

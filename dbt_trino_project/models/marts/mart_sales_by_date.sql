@@ -1,4 +1,4 @@
-{{ config(materialized='table', tags=['marts']) }}
+{{ config(materialized='view', tags=['marts']) }}
 
 with revenue as (
     select 
