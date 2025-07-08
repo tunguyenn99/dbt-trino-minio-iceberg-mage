@@ -1,0 +1,8 @@
+version: 2
+models:
+- name: mart_sales_by_date
+  description: Daily revenue and profit summary
+- name: mart_customer_lifetime_value
+  description: Customer revenue metrics and lifetime value
+- name: mart_top_products
+  description: Top-selling products by revenue and frequency

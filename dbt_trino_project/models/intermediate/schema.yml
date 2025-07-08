@@ -1,0 +1,8 @@
+version: 2
+models:
+- name: int_order_revenue
+  description: Revenue and item count per order
+- name: int_customer_segment
+  description: Aggregated customer orders and revenue by marketing segment
+- name: int_product_profitability
+  description: Revenue, cost, and profit per product-supplier pair

@@ -1,0 +1,22 @@
+version: 2
+sources:
+- name: tpch
+  schema: tpch
+  description: Source tables from the TPC-H benchmark dataset at scale factor tiny
+  tables:
+  - name: customer
+    description: Customer master data
+  - name: lineitem
+    description: Line items for orders
+  - name: nation
+    description: Nation reference data
+  - name: orders
+    description: Customer orders
+  - name: part
+    description: Part master data
+  - name: partsupp
+    description: Part-Supplier bridge table
+  - name: region
+    description: Region reference data
+  - name: supplier
+    description: Supplier master data
