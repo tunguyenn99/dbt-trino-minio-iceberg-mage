@@ -17,7 +17,7 @@ minio:
 	open "http://localhost:9001"
 
 trino-ui:
-	open "http://localhost:8080"
+	open "http://localhost:8088"
 
 logs:
 	docker logs trino-coordinator

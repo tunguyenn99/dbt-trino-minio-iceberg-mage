@@ -5,7 +5,7 @@ services:
     hostname: trino-coordinator
     container_name: trino-coordinator
     ports:
-      - '8080:8080'
+      - '8088:8080'
     volumes:
       - ./etc:/etc/trino
     networks:
