@@ -7,7 +7,7 @@ dbt_trino_project:
       user: tunguyenn99
       password: ''  # required if method is ldap or kerberos
       database: minio
-      host: localhost
+      host: trino-coordinator
       port: 8088
       schema: tpch
       threads: 4
@@ -18,7 +18,7 @@ dbt_trino_project:
       user: tunguyenn99
       password: ''  # required if method is ldap or kerberos
       database: minio
-      host: localhost
+      host: trino-coordinator
       port: 8088
       schema: tpch
       threads: 4
