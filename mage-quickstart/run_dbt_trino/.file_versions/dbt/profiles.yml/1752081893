@@ -1,0 +1,26 @@
+dbt_trino_project:
+  outputs:
+
+    dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: tunguyenn99
+      password: ''  # required if method is ldap or kerberos
+      database: minio
+      host: localhost
+      port: 8088
+      schema: tpch
+      threads: 4
+
+    prod:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: tunguyenn99
+      password: ''  # required if method is ldap or kerberos
+      database: minio
+      host: localhost
+      port: 8088
+      schema: tpch
+      threads: 4
+
+  target: dev

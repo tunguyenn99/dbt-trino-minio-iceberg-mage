@@ -1,0 +1,75 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dbt:
+      command: run
+    dbt_profile_target: null
+    dbt_project_name: dbt
+    disable_query_preprocessing: false
+    export_write_policy: append
+    file_source:
+      path: dbts/dbt_run_staging.yaml
+    use_raw_sql: false
+  downstream_blocks:
+  - dbt_run_intermediate
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: dbt_run_staging
+  retry_config: null
+  status: executed
+  timeout: null
+  type: dbt
+  upstream_blocks: []
+  uuid: dbt_run_staging
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dbt:
+      command: run --
+    dbt_profile_target: ''
+    dbt_project_name: dbt
+    disable_query_preprocessing: false
+    export_write_policy: append
+    file_source:
+      path: dbts/dbt_run_intermediate.yaml
+    use_raw_sql: false
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: yaml
+  name: dbt_run_intermediate
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: dbt
+  upstream_blocks:
+  - dbt_run_staging
+  uuid: dbt_run_intermediate
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-07-09 17:27:38.755529+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: run_dbt_project
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: run_dbt_project
+variables_dir: /home/src/mage_data/run_dbt_trino
+widgets: []

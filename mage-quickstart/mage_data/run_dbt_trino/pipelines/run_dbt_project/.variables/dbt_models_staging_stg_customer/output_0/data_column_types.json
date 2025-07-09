@@ -1,0 +1,1 @@
+{"custkey": "int64", "customer_name": "str", "address": "str", "nationkey": "int64", "nation_name": "str", "region_name": "str", "phone": "str", "acctbal": "Decimal", "mktsegment": "str", "comment": "str"}

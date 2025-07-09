@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  magic:
+    image: mageai/mageai:latest
+    command: mage start ${PROJECT_NAME}
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      USER_CODE_PATH: /home/src/${PROJECT_NAME}
+      ENV: ${ENV}
+    ports:
+      - 6789:6789
+    volumes:
+      - .:/home/src/
+      - ../dbt_trino_project:/home/src/run_dbt_trino/dbt/ # <<== Bổ sung đường dẫn đến dbt_trino_project
+    restart: on-failure:5
+    networks:
+      - trino-network
+
+networks:
+  trino-network:
+    external: true
+    name: dbt-trino-minio-iceberg_trino-network
