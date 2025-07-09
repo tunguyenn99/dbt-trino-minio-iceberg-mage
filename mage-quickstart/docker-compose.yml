@@ -17,10 +17,10 @@ services:
       - .:/home/src/
       - ../dbt_trino_project:/home/src/run_dbt_trino/dbt/ # <<== Bổ sung đường dẫn đến dbt_trino_project
     restart: on-failure:5
-    networks:
+    networks: # <<== Bổ sung mạng
       - trino-network
 
-networks:
+networks: # <<== Bổ sung mạng
   trino-network:
     external: true
     name: dbt-trino-minio-iceberg_trino-network
