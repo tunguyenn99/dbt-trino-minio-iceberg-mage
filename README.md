@@ -4,6 +4,10 @@ Dự án này thiết lập một môi trường phát triển đầy đủ cho 
 
 ---
 
+![Project Architecture](./images/s00-project-architect.png)
+
+---
+
 ## 📂 Cấu trúc thư mục dự án
 
 ```
