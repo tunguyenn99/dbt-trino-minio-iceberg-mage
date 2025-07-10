@@ -239,6 +239,8 @@ dbt_trino_project:
 dbt debug
 ```
 
+![DBT run](./images/s03-local-dbt-run.png)
+
 ---
 
 ### 6. Một số lệnh DBT thường dùng
@@ -257,8 +259,6 @@ dbt run --select tag:staging
 ## 🧙 Mage Quickstart – Tích hợp với `dbt_trino_project`
 
 Đây là hướng dẫn từng bước để tích hợp Mage vào dự án `dbt_trino_project`.
-
-![](./images/s06-mage-pipeline-editor.png)
 
 ### 1. Clone Mage Template
 
@@ -325,8 +325,13 @@ docker compose up --build
 
 → Truy cập Mage UI tại: [http://localhost:6789](http://localhost:6789)
 
-![](./images/s04-mage-terminal.png)
-![](./images/s05-mage-file-editor.png)
+- Mage cung cấp giao diện Terminal:
+  
+![Mage Terminal](./images/s04-mage-terminal.png)
+
+- Mage cung cấp giao diện Editor:
+- 
+![Mage File Editor](./images/s05-mage-file-editor.png)
 
 ---
 
